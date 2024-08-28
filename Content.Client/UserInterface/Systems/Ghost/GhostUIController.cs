@@ -1,4 +1,4 @@
-﻿using Content.Client.Gameplay;
+using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.UserInterface.Systems.Ghost.Widgets;
@@ -127,6 +127,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.GhostRolesPressed += GhostRolesPressed;
         Gui.TargetWindow.WarpClicked += OnWarpClicked;
         Gui.TargetWindow.OnGhostnadoClicked += OnGhostnadoClicked;
+        Gui.DeathmatchPressed += DeathmatchPressed; //qqq
 
         UpdateGui();
     }
@@ -140,6 +141,7 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
         Gui.ReturnToBodyPressed -= ReturnToBody;
         Gui.GhostRolesPressed -= GhostRolesPressed;
         Gui.TargetWindow.WarpClicked -= OnWarpClicked;
+        Gui.DeathmatchPressed -= DeathmatchPressed;
 
         Gui.Hide();
     }
@@ -159,5 +161,10 @@ public sealed class GhostUIController : UIController, IOnSystemChanged<GhostSyst
     private void GhostRolesPressed()
     {
         _system?.OpenGhostRoles();
+    }
+
+    private void DeathmatchPressed()
+    {
+        Gui?.DeathmatchLobbiesWindow.OpenCentered();
     }
 }

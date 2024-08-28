@@ -1,0 +1,32 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls">
+    <PanelContainer Name="BackgroundColorPanel" Access="Public"/>
+    <BoxContainer Orientation="Horizontal"
+                  HorizontalExpand="True"
+                  SeparationOverride="4">
+        <Label Name="HostNameLabel"
+               SizeFlagsStretchRatio="3"
+               HorizontalExpand="True"
+               ClipText="True"
+               Text="Host"
+               MouseFilter="Pass"/>
+        <cc:VSeparator/>
+        <Label Name="MapNameLabel"
+               SizeFlagsStretchRatio="3"
+               HorizontalExpand="True"
+               ClipText="True"
+               Text="Map"
+               MouseFilter="Pass"/>
+        <cc:VSeparator/>
+        <Label Name="PlayersCounterLabel"
+               SizeFlagsStretchRatio="3"
+               HorizontalExpand="True"
+               Text="Players"/>
+        <cc:VSeparator/>
+        <BoxContainer Orientation="Horizontal"
+                      HorizontalExpand="True"
+                      SizeFlagsStretchRatio="3"> 
+        <TextureRect Margin="20 1 1 1" TexturePath="/Textures/Interface/Changelog/wrench.svg.192dpi.png"/>
+        </BoxContainer>
+    </BoxContainer>
+</Control>

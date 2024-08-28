@@ -33,3 +33,7 @@ ghost-roles-window-rules-footer = The button will enable after {$time} seconds (
 
 ghost-return-to-body-title = Return to Body
 ghost-return-to-body-text = You are being revived! Return to your body?
+
+ghost-gui-deathmatch-window-button = Deathmatch
+ghost-deathmatch-lobbies-title = Deathmatch Lobbies
+ghost-deathmatch-warning = If you play,... I don't know!
